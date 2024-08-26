@@ -1,0 +1,217 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* Grid para o layout geral da página */
+body {
+    display: grid;
+    grid-template-columns: 10% 70% 20%;
+    grid-template-rows: 5rem 80rem 12rem;
+    grid-template-areas: "header header header"
+        "nav main aside"
+        "footer footer footer";
+
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1, h2, h3 {
+    font-family: "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+}
+
+/* Formatação do cabeçalho */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    grid-area: header;
+    background-color:#F29422;
+}
+
+
+/* Alteração de todos os a do site */
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+/* Formatação da barra de navegação*/
+nav {
+    grid-area: nav;
+    position: fixed;
+    width: 8.5rem;
+    height: 95%;
+}
+
+.navegacao {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 1rem;
+    border-radius: 1rem;
+
+    height: 100%;
+
+    box-shadow: 0 0 0.5rem;
+
+    background-color: antiquewhite;
+    text-align: center;
+
+    list-style: none;
+}
+
+.navegacao figure img {
+    width: 3rem;
+}
+
+nav ul li {
+    margin: 1rem 0;
+    position: relative;
+}
+
+nav a {
+    text-decoration: none;
+    color: black;
+}
+
+/* Formatação do menu dropdown */
+.dropdown {
+    display: none;
+    position: absolute;
+
+    width: 100%;
+
+    list-style: none;
+}
+
+.dropdown li {
+    margin: 0 4%;
+    padding: 0.5rem;
+    border-left: 1px solid grey;
+    border-right: 1px solid grey;
+    background-color: azure;
+}
+
+.dropdown li:first-child {
+    border-radius: 1rem 1rem 0 0;
+    border-top: 1px solid grey;
+}
+
+.dropdown li:last-child {
+    border-radius: 0 0 1rem 1rem;
+    border-bottom: 1px solid grey;
+}
+
+nav ul li:hover .dropdown {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Formatação do Conteúdo em main*/
+main {
+    padding: 0 2rem;
+    margin-left: 2rem;
+    grid-area: main;
+}
+
+/* Formatação do aside (em todas as páginas */
+aside {
+    padding: 1.5rem;
+    grid-area: aside;
+    background-color: beige;
+
+}
+
+aside p {
+    margin: 1rem 0;
+    line-height: 1.2;
+}
+
+aside h2 {
+    margin: 1rem 0;
+    text-align: center;
+}
+
+aside ul {
+    list-style: none;
+}
+
+aside ul li {
+    line-height: 1.5;
+}
+
+aside ul li a {
+    text-decoration: none;
+}
+
+/* Formatação do footer */
+footer {
+    grid-area: footer;
+    padding: 1rem 10rem;
+    background-color: #F24C22;
+}
+
+footer address {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+footer hr {
+    margin: 1rem 0;
+
+    border-color: black;
+}
+
+footer address+hr+p {
+    margin-top: 0.2rem;
+
+    text-align: center;
+}
+
+@media only screen and (max-width: 767px) {
+    body {
+        display: block;
+    }
+
+    header {
+        padding: 1rem;
+    }
+    
+    header figure img {
+        width: 6rem;
+    }
+
+    header h1 {
+        font-size: 4rem;
+    }
+
+    nav {
+        position: static;
+        width: 100%;
+    }
+
+    nav li {
+        font-size: 1.2rem;
+    }
+
+    .navegacao {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+
+    .dropdown {
+        width: 8rem;
+        left: -2.5rem;
+    }
+
+    main {
+        margin: 0;
+    }
+
+    footer {
+        padding: 1rem 2rem;
+    }
+}

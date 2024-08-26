@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hermes - Tenis Comum Branco</title>
+    <link type="text/css" rel="stylesheet" href="../css/layout.css">
+    <link type="text/css" rel="stylesheet" href="../css/produtos.css">
+    <link rel="shortcut icon" href="../imagens/favicon.ico" type="image/x-icon">
+    <script src="../script/produtos.js"></script>
+</head>
+
+<body>
+    <header>
+        <figure>
+            <img src="../imagens/logo.png" alt="logo do site" width="64px">
+        </figure>
+        <h1>Hermes!</h1>
+    </header>
+    <nav>
+        <ul class="navegacao">
+            <li>
+                <a href="../index.html">
+                    <figure>
+                        <img src="../imagens/inicio.svg" alt="icone de uma casa">
+                    </figure>
+                    Início
+                </a>
+            </li>
+            <li>
+                <figure>
+                    <img src="../imagens/loja.svg" alt="icone de uma casa">
+                </figure>
+                Loja v
+                <ul class="dropdown">
+                    <li><a href="loja.html">Todos</a></li>
+                    <li><a href="eletronicos.html">Eletrônicos</a></li>
+                    <li><a href="roupas.html">Roupas</a></li>
+                    <li><a href="acessorios.html">Acessórios</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="contato.html">
+                    <figure>
+                        <img src="../imagens/contato.svg" alt="icone de uma casa">
+                    </figure>
+                    Contatos
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+    <main>
+        <section class="produto_interface">
+            <figure>
+                <img src="../imagens/tenis_comum.png" alt="Tenis comum branco - Foto de Idean Azad na Unsplash">
+            </figure>
+            <article>
+                <h1 id="preco_total">R$64.00</h1>
+                <h2 id="nome_produto">Tenis Comum Branco</h2>
+                <hr>
+                <p>Tenis Comum Branco, calçado confortavel e simples. Apenas tamanho 38. </p>
+                <form action="">
+                    <input type="number" name="preco" id="preco" value="64" hidden>
+                    <br>
+                    <label for="qnt">Insira a quantidade de produtos que deseja comprar: </label>
+                    <fieldset>
+                        <button type="button" id="diminuir" onclick="diminuir_preco(this.form)">-</button>
+                        <input type="number" name="qnt" id="qnt" value="1" disabled>
+                        <button type="button" id="aumentar" onclick="aumentar_preco(this.form)">+</button>
+                    </fieldset>
+                    <button type="button" id="exibir_form"
+                        onclick="exibir_interface(document.getElementById('interface'))">Comprar Agora!</button>
+                </form>
+            </article>
+        </section>
+        <section id="interface">
+            <form id="formulario">
+                <header>
+                    <h1>Confirmação da Compra</h1>
+                </header>
+                <hr>
+                <figure>
+                    <img src="../imagens/tenis_comum.png" alt="Tenis comum branco - Foto de Idean Azad na Unsplash">
+                    <figcaption>
+                        <h2 id="nome_exibido"></h2>
+                        <p id="unidades"></p>
+                        <p id="exibir_preco_total"></p>
+                    </figcaption>
+                </figure>
+                <hr>
+                <h3>Dados para a Entrega</h3>
+                <fieldset>
+                    <input type="text" name="nome" id="nome" placeholder="Nome Completo">
+
+                    <input type="email" name="email" id="email" placeholder="Email">
+
+                    <input type="tel" name="telefone" id="telefone" placeholder="Telefone">
+
+                </fieldset>
+
+                <fieldset>
+                    <input type="text" name="endereco" id="endereco" placeholder="Endereço">
+
+                    <input type="number" name="numero" id="numero" step="0" placeholder="Número">
+
+                    <input type="text" name="cidade" id="cidade" placeholder="Cidade">
+                </fieldset>
+
+                <label for="horario">Horário de Entrega (opcional)</label>
+                <input type="time" name="horario" id="horario" min="10:00" max="18:00">
+
+                <hr>
+                <fieldset class="canc_confir">
+                    <button type="button"
+                        onclick="esconder_interface(document.getElementById('interface'))">Cancelar</button>
+                    <button type="confirmar" onclick="confirmar_compra(this.form)">Confirmar</button>
+                </fieldset>
+            </form>
+        </section>
+    </main>
+    <aside>
+        <h2>Sobre os métodos de pagamento</h2>
+        <p>
+            Na Hermes, pensamos em cada detalhe para diminuir a burocracia na compra. Por isso, oferecemos o pagamento
+            na entrega. Pagar no
+            ato da entrega nunca foi tão prático! Você pode escolher entre dinheiro, cartão de crédito ou débito, e
+            ainda contar com a segurança e comodidade
+            de um pagamento sem burocracia.
+        </p>
+    </aside>
+    <footer>
+        <address>
+            <p>
+                Nossa sede:<br>
+                R. Teresina de Oliveira, 2480<br>
+                José Talarico de Almeida<br>
+                Paraíba<br>
+                Brasil<br>
+            </p>
+            <p>
+                Email para contato:<br>
+                hermes.entregas@hermes.com
+            </p>
+        </address>
+        <hr>
+        <p>
+            Copyrights - João Mizuno 2024<br>
+            Todas as imagens pertencem aos seus devidos criadores, cujo quais foram devidamente referenciados.
+        </p>
+    </footer>
+</body>
+
+</html>

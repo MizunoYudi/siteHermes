@@ -1,0 +1,140 @@
+/* Grid para o layout geral da página */
+body {
+    grid-template-rows: 5rem 93.5rem 12rem;
+}
+
+.banner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 1rem 5rem;
+    margin: 1rem 0;
+
+    border-radius: 0.5rem;
+    background-image: url('../imagens/fundo.jpg');
+    background-size: cover;
+}
+
+.banner h2 {
+    color: white;
+    text-shadow: 5px 2px 7px #000;
+}
+
+section {
+    margin: 3rem 0;
+}
+
+section h2 {
+    margin: 3rem 0;
+    font-size: 2.5rem;
+}
+
+section h3 {
+    margin: 1.5rem;
+    font-size: 1.5rem;
+}
+
+.destaque {
+    padding: 0.5rem 0 2rem;
+    border-radius: 0.5rem;
+    background-color: #D9D1B8;
+}
+
+.categorias {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.categorias figure img {
+    width: 8rem;
+    rotate: 5deg;
+}
+
+.categorias figcaption {
+    text-align: center;
+}
+
+/* Formatação da exibição dos produtos em destaque */
+.grid-display {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.grid-display figure{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding: 1px;
+    border-radius: 0.5rem;
+
+    width: 11rem;
+    height: 16.5rem;
+    
+    background-color: antiquewhite;
+}
+
+.grid-display figure img {
+    width: 10rem;
+    margin: 0.4rem;
+    border: 1px solid black;
+    border-radius: 0.5rem;
+}
+
+.grid-display figure figcaption {
+    width: 90%;
+}
+
+.grid-display figure figcaption p {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+
+.grid-display figure figcaption p + p {
+    font-size: 1.35rem;
+    line-height: 2rem;
+}
+
+.final figure {
+    display: flex;
+    align-items: center;
+}
+
+.final figure img {
+    margin: 0 auto;
+    width: 32rem;
+}
+
+@media only screen and (max-width: 1200px){
+    .grid-display {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        justify-content: center;
+    }
+
+    .grid-display figure{
+        margin: 1rem auto;
+    }
+
+    body {
+        grid-template-rows: 5rem 125rem 12rem;
+    }
+
+    .final figure img {
+        width: 25rem;
+    }
+}
+
+@media only screen and (max-width: 767px){
+    .grid-display {
+        display: block;
+    }
+
+    .categorias {
+        flex-direction: column;
+    }
+}

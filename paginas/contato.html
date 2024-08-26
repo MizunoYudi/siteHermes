@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hermes - Contato</title>
+    <link type="text/css" rel="stylesheet" href="../css/layout.css">
+    <link type="text/css" rel="stylesheet" href="../css/contato.css">
+    <link rel="shortcut icon" href="../imagens/favicon.ico" type="image/x-icon">
+    <script src="../script/contato.js"></script>
+</head>
+
+<body>
+    <header>
+        <figure>
+            <img src="../imagens/logo.png" alt="logo do site" width="64px">
+        </figure>
+        <h1>Hermes!</h1>
+    </header>
+    <nav>
+        <ul class="navegacao">
+            <li>
+                <a href="../index.html">
+                    <figure>
+                        <img src="../imagens/inicio.svg" alt="icone de uma casa">
+                    </figure>
+                    Início
+                </a>
+            </li>
+            <li>
+                <figure>
+                    <img src="../imagens/loja.svg" alt="icone de uma casa">
+                </figure>
+                Loja v
+                <ul class="dropdown">
+                    <li><a href="loja.html">Todos</a></li>
+                    <li><a href="eletronicos.html">Eletrônicos</a></li>
+                    <li><a href="roupas.html">Roupas</a></li>
+                    <li><a href="acessorios.html">Acessórios</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="contato.html">
+                    <figure>
+                        <img src="../imagens/contato.svg" alt="icone de uma casa">
+                    </figure>
+                    Contatos
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+    <main>
+        <header>
+            <h1>Entre em contato conosco!</h1>
+        </header>
+        <section class="formulario">
+            <h2>Preencha as informações abaixo para enviar alguma reclamação, feedback, dúvida ou começar uma parceria!
+            </h2>
+            <form id="contato">
+                <fieldset>
+                    <input type="text" name="nome" id="nome" placeholder="Nome completo" required>
+
+                    <input type="email" name="email" id="email" placeholder="E-mail: carlo123@gmail.com" required>
+
+                    <input type="tel" name="telefone" id="telefone" placeholder="Telefone: (11)12345-6789" required>
+
+                    <select name="opc_contato" id="opc_contato">
+                        <option value="reclamacao">Reclamação</option>
+                        <option value="feedback">Feedback</option>
+                        <option value="parceria">Parceria</option>
+                        <option value="duvida">Dúvida</option>
+                    </select>
+                </fieldset>
+
+                <label for="descricao">Pode nos descrever mais sobre o que deseja falar?</label>
+                <textarea name="descricao" id="descricao" cols="30" rows="5" required></textarea>
+
+                <button type="button" id="enviar" onclick="envia(this.form)">Enviar</button>
+            </form>
+        </section>
+        <section id="popup">
+            <article>
+                <h1>Mensagem Enviada!</h1>
+                <hr>
+                <p id="mensagem"></p>
+                <button type="button" id="confirmar" onclick="confirmar()">Confimar</button>
+            </article>
+        </section>
+    </main>
+    <aside>
+        <h2>Manter uma boa comunicação é nossa principal prioridade</h2>
+        Na Hermes, a comunicação é o alicerce da nossa jornada. Acreditamos que a colaboração com nossos clientes e parceiros é fundamental para construirmos
+        um futuro ainda mais rápido e eficiente. Mantemos as portas abertas para ouvir suas sugestões, ideias e críticas, pois entendemos que juntos podemos
+        alcançar resultados ainda mais surpreendentes. A sua voz é essencial para moldarmos os serviços do futuro.
+    </aside>
+    <footer>
+        <address>
+            <p>
+                Nossa sede:<br>
+                R. Teresina de Oliveira, 2480<br>
+                José Talarico de Almeida<br>
+                Paraíba<br>
+                Brasil<br>
+            </p>
+            <p>
+                Email para contato:<br>
+                hermes.entregas@hermes.com
+            </p>
+        </address>
+        <hr>
+        <p>
+            Copyrights - João Mizuno 2024<br>
+            Todas as imagens pertencem aos seus devidos criadores, cujo quais foram devidamente referenciados.
+        </p>
+    </footer>
+</body>
+
+</html>

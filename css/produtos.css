@@ -1,0 +1,392 @@
+body {
+    grid-template-rows: 5rem 40rem 12rem;
+}
+
+main {
+    margin-top: 2rem;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+.produto_interface {
+    display: flex;
+}
+
+.produto_interface figure {
+    display: flex;
+    width: 26rem;
+    height: 25rem;
+
+    border-radius: 0.5rem 0 0 0.5rem;
+
+    background-color: antiquewhite;
+}
+
+.produto_interface figure img {
+    margin: 1rem 1.2rem;
+    border-radius: 0.5rem;
+}
+
+.produto_interface article {
+    display: flex;
+    flex-direction: column;
+    padding: 3rem;
+    border-radius: 0 0.5rem 0.5rem;
+
+    width: 50%;
+    height: 19rem;
+
+    background-color: aliceblue;
+}
+
+.produto_interface article h1{
+    margin: 0.5rem 0;
+    font-size: 2.5rem;
+}
+
+.produto_interface article h2{
+    margin: 0.25rem 0;
+}
+
+.produto_interface article hr{
+    margin: 0.75rem 0;
+}
+
+.produto_interface article fieldset{
+    display: flex;
+    justify-content: center;
+    margin: 1rem auto;
+    border: none;
+}
+
+.produto_interface article fieldset :is(button, input){
+    font-size: 1rem;
+}
+
+.produto_interface article fieldset button:nth-child(1){
+    border-radius: 0.2rem 0 0 0.2rem;
+}
+
+.produto_interface article fieldset button:nth-child(3){
+    border-radius: 0 0.2rem 0.2rem 0;
+}
+
+.produto_interface article fieldset button{
+    margin: 0;
+    border: none;
+
+    cursor: pointer;
+    background-color: red;
+    color: white;
+    font-weight: bolder;
+    
+    width: 1.2rem;
+}
+
+.produto_interface article fieldset input:disabled{
+    margin: 0;
+    width: 2rem;
+    
+    background-color: white;
+    color: black;
+    text-align: center;
+}
+
+.produto_interface article form button:nth-child(5){
+    border: none;
+    border-radius: 0.5rem;
+
+    background-color: green;
+    color: white;
+    font-size: 1rem;
+}
+
+#exibir_form {
+    margin: auto 5%;
+    padding: 1rem;
+    width: 90%;
+}
+
+#interface {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+#interface form {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    border-radius: 0.5rem;
+
+    width: 80%;
+    height: 80%;
+    background-color: aliceblue;
+}
+
+#interface header {
+    background: none;
+}
+
+#interface hr{
+    margin: 0.5rem 0;
+}
+
+#interface figure {
+    display: flex;
+    margin: 1rem auto;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+
+    width: 90%;
+
+    background-color: snow;
+}
+
+#interface figure img {
+    border-radius: 0.5rem;
+    width: 6rem;
+}
+
+#interface figure figcaption {
+    margin: 0 1rem;
+}
+
+#interface fieldset {
+    border: none;
+}
+
+#interface figure figcaption p{
+    margin: 0.5rem 0;
+}
+
+#interface form h3 {
+    margin: 0.5rem;
+}
+
+#interface form fieldset {
+    display: flex;
+    justify-content: space-evenly;
+
+    margin: 1rem 0 ;
+}
+
+#interface form fieldset input{
+    padding: 0.25rem;
+    border: 2px solid gray;
+    border-radius: 0.25rem;
+
+    width: 30%;
+    font-size: 1rem;
+}
+
+#interface form input[type="time"]{
+    align-self: center;
+
+    margin: 1rem;
+
+    font-size: 1rem;
+}
+
+#interface form label {
+    display: block;
+
+    text-align: center;
+}
+
+#interface .canc_confir {
+    display: flex;
+    justify-content: space-evenly;
+
+    width: 100%;
+}
+
+#interface .canc_confir button {
+    padding: 1rem;
+    border: none;
+    border-radius: 0.5rem;
+
+    width: 40%;
+
+    font-size: 1.25rem;
+    color: white;
+}
+
+#interface .canc_confir button:nth-child(1){
+    background-color: red;
+}
+
+#interface .canc_confir button:nth-child(2){
+    background-color: blue;
+}
+
+@media only screen and (min-width: 1021px) and (max-width: 1275px) {
+    body {
+        grid-template-rows: 5rem 70rem 12rem;
+    }
+
+    .produto_interface {
+        flex-direction: column;
+    }
+    
+    .produto_interface figure {
+        width: 40rem;
+        border-radius: 0.5rem 0.5rem 0 0;
+    }
+
+    .produto_interface figure img {
+        margin: 1rem auto;
+        height: 92%;
+    }
+
+    .produto_interface article {
+        width: 34rem;
+
+        border-radius: 0 0 0.5rem 0.5rem;
+    }
+
+    .produto_interface article fieldset :is(button, input){
+        font-size: 1.4rem;
+    }
+    
+    .produto_interface article fieldset button{
+        width: 2rem;
+    }
+    
+    .produto_interface article fieldset input:disabled{
+        margin: 0;
+        width: 2.3rem;
+        
+        background-color: white;
+        color: black;
+        text-align: center;
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1020px) {
+    body {
+        display: grid;
+        grid-template-columns: 10% 70% 20%;
+        grid-template-rows: 5rem 80rem  20 rem 12rem;
+        grid-template-areas: "header header header"
+            "nav main main"
+            "aside aside aside"
+            "footer footer footer";
+    
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    body {
+        grid-template-rows: 5rem 70rem 12rem;
+    }
+
+    .produto_interface {
+        flex-direction: column;
+    }
+    
+    .produto_interface figure {
+        width: 40rem;
+        border-radius: 0.5rem 0.5rem 0 0;
+    }
+
+    .produto_interface figure img {
+        margin: 1rem auto;
+        height: 92%;
+    }
+
+    .produto_interface article {
+        width: 34rem;
+
+        border-radius: 0 0 0.5rem 0.5rem;
+    }
+
+    aside {
+        padding-left: 10rem;
+    }
+
+    .produto_interface article fieldset :is(button, input){
+        font-size: 1.4rem;
+    }
+    
+    .produto_interface article fieldset button{
+        width: 2rem;
+    }
+    
+    .produto_interface article fieldset input:disabled{
+        margin: 0;
+        width: 2.3rem;
+        
+        background-color: white;
+        color: black;
+        text-align: center;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    main {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .produto_interface {
+        flex-direction: column;
+    }
+    
+    .produto_interface figure {
+        margin: 0 auto;
+        width: 26rem;
+        border-radius: 0.5rem 0.5rem 0 0;
+    }
+
+    .produto_interface figure img {
+        margin: 1rem auto;
+        height: 92%;
+    }
+
+    .produto_interface article {
+        margin: 0 auto;
+        width: 20rem;
+        height: 22rem;
+
+        border-radius: 0 0 0.5rem 0.5rem;
+    }
+
+    .produto_interface article fieldset :is(button, input){
+        font-size: 2rem;
+    }
+    
+    .produto_interface article fieldset button {
+        width: 2rem;
+    }
+    
+    .produto_interface article fieldset input:disabled {
+        margin: 0;
+        width: 3rem;
+        
+        background-color: white;
+        color: black;
+        text-align: center;
+    }
+
+    aside {
+        margin-top: 1.8rem;
+    }
+
+    #interface header{
+        padding: 0;
+    }
+
+    #interface header h1{
+        font-size: 1.2rem;
+    }
+}

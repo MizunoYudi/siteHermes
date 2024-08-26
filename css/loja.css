@@ -1,0 +1,150 @@
+body {
+    grid-template-rows: 5rem 54rem 12rem;
+}
+
+main header {
+    display: block;
+
+    margin: 1rem 0;
+    padding: 2rem;
+    border-radius: 0.5rem;
+
+    background-color: #F2B022;
+    color: white;
+}
+
+.nav_produtos {
+    margin: 1.5rem;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    background-color: #F2B973;
+}
+
+.nav_produtos ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+
+    font-size: 1.2rem;
+    list-style: none;
+}
+
+.nav_produtos a {
+    display: flex;
+}
+
+.nav_produtos figure {
+    display: flex;
+    width: 1.2rem
+}
+
+.nav_produtos figure img{
+    width: 100%;
+    height: 100%;
+    vertical-align: center;
+}
+
+.grid_display {
+    display: grid;
+    grid-template-columns: 24% 24% 24% 24%;
+    gap: 0.8rem;
+}
+
+.grid_display a {
+    margin: 0 auto;
+    width: fit-content;
+    height: fit-content;
+    text-decoration: none;
+}
+
+.grid_display figure {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    margin: 0 auto;
+    border-radius: 0.5rem;
+
+    width: 14.8rem;
+    height: 18.5rem;
+
+    background-color: antiquewhite;
+}
+
+.grid_display figure img {
+    margin: 1rem 0.4rem;
+    border: 1px solid black;
+    border-radius: 0.5rem;
+
+    width: 12rem;
+}
+
+.grid_display figure figcaption {
+    width: 11.9rem;
+
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.grid_display figure figcaption p {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+
+.grid_display figure figcaption p + p {
+    font-size: 1.35rem;
+    line-height: 2rem;
+}
+
+@media only screen and (min-width: 1321px) and (max-width: 1600px){
+    .grid_display {
+        grid-template-columns: 33% 33% 33%;
+        gap: 0.8rem;
+    }
+}
+
+@media only screen and (min-width: 993px) and (max-width: 1320px){
+    .grid_display {
+        grid-template-columns: 45% 45%;
+        gap: 0.8rem;
+    }
+
+    body {
+        grid-template-rows: 5rem 74rem 12rem;
+    }
+}
+
+@media only screen and (max-width: 992px){
+    .grid_display {
+        display: flex;
+        flex-direction: column;
+    }
+
+    body {
+        grid-template-rows: 5rem 131rem 14rem;
+    }
+}
+
+@media only screen and (max-width: 767px){
+    .grid_display {
+        display: flex;
+        flex-direction: column;
+    }
+
+    main header:first-child h1 {
+        font-size: 2rem;
+    }
+
+    aside {
+        margin-top: 1.8rem;
+    }
+
+    .nav_produtos ul {
+        flex-direction: column;
+    }
+
+    .nav_produtos ul li {
+        margin: 0.5rem 0;
+    }
+}
